@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-import Pokemon from './Pokemon.js'
 
 class Pokedex extends Component {
   render() {
@@ -14,17 +15,14 @@ class Pokedex extends Component {
     }
 
     return (
-      <div>
-        <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+index+'.png'} alt={this.props.name} />
-        <Pokemon />
-        <p>{this.props.name}</p>
-        <p>{this.props.height}</p>
-        <hr/>
+      <div>        
+          <img src={'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+index+'.png'} alt={this.props.name} />
+          <p>{this.props.name}</p>
+          <p>{this.props.height}</p>
+          <hr/>
       </div>
     )
   }
 }
 
 export default Pokedex;
-
-//https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/Redirect.md
